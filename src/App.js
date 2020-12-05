@@ -6,14 +6,24 @@ import CarouselDemoPage from "./components/CarouselDemoPage";
 import styled from "styled-components";
 
 function App() {
-  const [vpWidth, setVpWidth] = useState(window.innerWidth);
+  const [vpSize, setVpSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleResize = () => setVpWidth(window.innerWidth);
+  const handleResize = () => {
+    requestAnimationFrame(() =>
+      setVpSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      })
+    );
+  };
 
   const Home = () => {
     const containerVariants = {
@@ -83,7 +93,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/carousel">
-            <CarouselDemoPage vpWidth={vpWidth} />
+            <CarouselDemoPage vpSize={vpSize} />
           </Route>
         </Switch>
       </AnimatePresence>
