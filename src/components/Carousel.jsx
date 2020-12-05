@@ -6,25 +6,20 @@ const Carousel = ({ vpSize, initialItems }) => {
   const [items, setItems] = useState(initialItems);
   const [selectedItem, setSelectedItem] = useState(0);
 
-  const cardBorderWidth = 1;
   const cardMargin = 12;
 
   const cardInnerWidth = vpSize.height * 0.3;
-  const cardWidth = cardInnerWidth + 2 * cardMargin + 2 * cardBorderWidth;
-
+  const cardWidth = cardInnerWidth + 2 * cardMargin;
   const selectedCardInnerWidth = vpSize.height * 0.4;
-  const selectedCardWidth =
-    selectedCardInnerWidth + 2 * cardMargin + 2 * cardBorderWidth;
+  const selectedCardWidth = selectedCardInnerWidth + 2 * cardMargin;
 
-  const offset =
-    -(selectedItem * cardWidth) + vpSize.width / 2 - selectedCardWidth / 2;
+  const offset = -(selectedItem * cardWidth) + vpSize.width / 2 - selectedCardWidth / 2;
 
-  const handleClickCard = (e) =>
-    setSelectedItem(parseInt(e.target.dataset.idx));
+  const handleClickCard = (e) => setSelectedItem(parseInt(e.target.dataset.idx));
 
   const cards = items.map((item, idx) => {
     const isSelected = idx === selectedItem;
-    const size = isSelected ? selectedCardWidth : cardWidth;
+    const size = isSelected ? selectedCardInnerWidth : cardInnerWidth;
 
     return (
       <s.Card
@@ -33,10 +28,8 @@ const Carousel = ({ vpSize, initialItems }) => {
         onClick={handleClickCard}
         animate={{ width: size, height: size }}
         transition={{ duration: 0.2, delay: 0.3 }}
-        cardBorderWidth={cardBorderWidth}
         cardMargin={cardMargin}
         cardInnerWidth={cardInnerWidth}
-        selectedCardInnerWidth={selectedCardInnerWidth}
         data-idx={idx}
       />
     );

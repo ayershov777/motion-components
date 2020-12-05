@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-const NUMBER_OF_ITEMS = 6;
+const NUMBER_OF_ITEMS = 20;
 
 const items = [];
 
