@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import cardWidth from '../utils/cardWidth';
-
 const Navbar = styled.div`
     display: flex;
     justify-content: space-around;
@@ -37,16 +35,16 @@ const Slider = styled(motion.div)`
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    width: ${props => props.n * cardWidth}px;
+    width: ${({ n, cardWidth, selectedCardWidth }) => (n-1) * cardWidth + selectedCardWidth}px;
     height: 60vh;
 `;
 
 const Card = styled(motion.div)`
     display: inline-block;
-    margin: 12px;
-    height: 500px;
-    width: 500px;
-    border: 1px solid black;
+    margin: ${({ cardMargin }) => cardMargin}px;
+    height: ${({ cardInnerHeight }) => cardInnerHeight};
+    width: ${({ cardInnerWidth }) => cardInnerWidth};
+    border: ${({ cardBorderWidth }) => cardBorderWidth}px solid black;
 `;
 
 export default {

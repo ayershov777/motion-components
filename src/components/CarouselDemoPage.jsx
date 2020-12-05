@@ -4,9 +4,9 @@ import initialItems from '../utils/initialItems';
 
 import Carousel from './Carousel';
 
-const CarouselDemoPage = ({ vpWidth }) => (
+const CarouselDemoPage = ({ vpSize }) => (
     <div style={{ overflowY: 'hidden' }}>
-        <Carousel initialItems={initialItems} vpWidth={vpWidth} />
+        <Carousel initialItems={initialItems} vpSize={vpSize} />
     </div>
 );
 

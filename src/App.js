@@ -5,14 +5,22 @@ import Navbar from './components/Navbar';
 import CarouselDemoPage from './components/CarouselDemoPage';
 
 function App() {
-  const [vpWidth, setVpWidth] = useState(window.innerWidth);
+  const [vpSize, setVpSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleResize = () => setVpWidth(window.innerWidth);
+  const handleResize = () => {
+    requestAnimationFrame(() => setVpSize({
+      width: window.innerWidth,
+      height: window.innerHeight
+    }));
+  };
 
   return (
     <Router>
@@ -20,7 +28,7 @@ function App() {
       <Switch>
         <Route exact path="/">Home</Route>
         <Route path="/carousel">
-          <CarouselDemoPage vpWidth={vpWidth} />
+          <CarouselDemoPage vpSize={vpSize} />
         </Route>
       </Switch>
     </Router>
