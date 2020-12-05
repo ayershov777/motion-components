@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom';
 import cardWidth from '../utils/cardWidth';
 
 const Navbar = styled.div`
+    color: black;
+    font-family: "Cabin Medium";
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 20vh;
-    background-color: teal;
+    height: 10vh;
+    background-color: white;
 `;
 
 const NavLink = styled(Link)`
     font-size: 24pt;
     text-decoration: none;
-    color: yellow;
+    color: black;
     text-transform: uppercase;
 `;
 
@@ -38,14 +40,14 @@ const Slider = styled(motion.div)`
     align-items: center;
     overflow-x: hidden;
     width: ${props => props.n * cardWidth}px;
-    height: 60vh;
+    height: 80vh;
 `;
 
 const Card = styled(motion.div)`
     display: inline-block;
     margin: 12px;
-    height: 500px;
-    width: 500px;
+    height: 30vh;
+    width: 30vh;
     border: 1px solid black;
 `;
 

@@ -7,7 +7,7 @@ const Carousel = ({ initialItems, vpWidth }) => {
     const [items, setItems] = useState(initialItems);
     const [selectedItem, setSelectedItem] = useState(0);
 
-    const offset = -(selectedItem * cardWidth) + vpWidth/2 - cardWidth/2;
+    const offset = -(selectedItem * cardWidth) + vpWidth/2 - (vpWidth * 0.4 + 26) / 2;
 
     const handleClickCard = (e) => setSelectedItem(parseInt(e.target.dataset.idx));
 
@@ -21,8 +21,8 @@ const Carousel = ({ initialItems, vpWidth }) => {
                 onClick={handleClickCard}
                 data-idx={idx}
                 animate={{
-                    width: isSelected ? 600 : 500,
-                    height: isSelected ? 600 : 500
+                    width: isSelected ? '40vh' : '30vh',
+                    height: isSelected ? '40vh' : '30vh',
                 }}
                 transition={{
                     duration: 0.2,

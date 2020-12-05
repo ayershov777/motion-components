@@ -1,1 +1,1 @@
-export default 514;
+export default window.innerHeight * 0.33 + 26;
