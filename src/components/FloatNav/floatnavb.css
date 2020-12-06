@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 * {
     transition: 0.33s ease;
 }
+
 body {
     background-color: #e4e9e9;
     font-family: "Raleway";
@@ -171,9 +171,11 @@ body {
     background-color: rgba(0,0,0,0.6);
     color: #fff;
 }
+
 .whoa {
     animation: colors 1.5s infinite linear;
 }
+
 @-moz-keyframes colors {
     0% {
         background-color: #3eb890;

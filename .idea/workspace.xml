@@ -4,9 +4,12 @@
     <list default="true" id="bd75c746-7b82-4942-aad9-69d03f64c6b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FloatNav/floatnavb.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatNav/floatnavb.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styled/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styled/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +39,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\rando\Documents\Development\game\motion-components\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -47,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607163061244</updated>
       <workItem from="1607163063427" duration="4392000" />
+      <workItem from="1607229416868" duration="5263000" />
     </task>
     <servers />
   </component>

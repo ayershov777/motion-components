@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Navbar from "./components/Navbar";
 import CarouselDemoPage from "./components/CarouselDemoPage";
 import styled from "styled-components";
 import { FloatNav } from "./components/FloatNav";
@@ -91,10 +90,10 @@ function App() {
       <AnimatePresence exitBeforeEnter onExitComplete>
         <Switch>
           <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/carousel">
             <CarouselDemoPage vpSize={vpSize} />
+          </Route>
+          <Route path="/home">
+            <Home />
           </Route>
         </Switch>
       </AnimatePresence>

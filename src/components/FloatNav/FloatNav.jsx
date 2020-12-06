@@ -25,7 +25,6 @@ const FloatNav = () => {
       // better body background color changing function
       $(".menu-thing").click(function () {
         $("body").removeClass("whoa");
-        $(".face.two").removeClass("visible");
         $("body").css("background-color", $(this).css("background-color"));
 
         return false;
@@ -33,12 +32,16 @@ const FloatNav = () => {
 
       $(".whoa-button").click(function () {
         $("body").toggleClass("whoa");
-        $(".face.two").toggleClass("visible");
 
         return false;
       });
     });
   });
+
+  /* change background */
+  const handleClicked = () => {
+    document.body.classList.remove("whoa");
+  };
 
   return (
     <Main>
@@ -47,17 +50,19 @@ const FloatNav = () => {
         <label className="menu-label" htmlFor="menuCheckbox">
           <div className="white-line" />
         </label>
-        <div className="menu-thing side one">
+        <div className="menu-thing side one" onClick={handleClicked}>
           <s.NavLink to="/">01</s.NavLink>
           <Link to="/home" />
         </div>
-        <div className="menu-thing side two">
+        <div className="menu-thing side two" onClick={handleClicked}>
           <s.NavLink to="/carousel">02</s.NavLink>
         </div>
-        <div className="menu-thing side three">
+        <div className="menu-thing side three" onClick={handleClicked}>
           <Link to="/home">n_n</Link>
         </div>
-        <div className="menu-thing side four">:)</div>
+        <div className="menu-thing side four" onClick={handleClicked}>
+          : )
+        </div>
       </div>
       <div className="whoa-button">:O</div>
     </Main>
