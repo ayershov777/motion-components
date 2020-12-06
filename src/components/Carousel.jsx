@@ -85,6 +85,7 @@ const Carousel = ({ vpSize, initialItems }) => {
             cardMargin={cardMargin}
             handleClickCard={handleClickCard}
             idx={idx}
+            image={item.img}
             selectedCardInnerWidth={selectedCardInnerWidth}
             selectedItem={selectedItem}
           />

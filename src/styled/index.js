@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -43,6 +43,37 @@ const Slider = styled(motion.div)`
 `;
 
 /* card section */
+/* Card border gradient motion */
+const gradientAnimation = keyframes` 
+  0% {
+    background-position: 15% 0%;
+  }
+  50% {
+    background-position: 85% 100%;
+  }
+  100% {
+    background-position: 15% 0%;
+  }
+`;
+
+const frameEnter = keyframes`
+  0% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+  }
+`;
+
 const Card = styled(motion.div)`
   position: relative;
   -webkit-box-flex: 0;
@@ -50,7 +81,7 @@ const Card = styled(motion.div)`
   display: inline-block;
   background-color: #333;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 4px;
   margin: 0 ${({ cardMargin }) => cardMargin}px;
   height: ${({ cardInnerWidth }) => cardInnerWidth}px;
   width: ${({ cardInnerWidth }) => cardInnerWidth}px;
@@ -58,6 +89,31 @@ const Card = styled(motion.div)`
     inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
   -webkit-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: linear-gradient(120deg, #00f260, #0575e6, #00f260);
+    background-size: 300% 300%;
+    clip-path: polygon(
+      0% 100%,
+      3px 100%,
+      3px 3px,
+      calc(100% - 3px) 3px,
+      calc(100% - 3px) calc(100% - 3px),
+      3px calc(100% - 3px),
+      3px 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+    animation: frameEnter 1s forwards ease-in-out reverse,
+      ${gradientAnimation} 4s ease-in-out infinite;
+  }
 `;
 
 const CardBg = styled.div`
@@ -103,6 +159,9 @@ const CardInfo = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    right: 0;
+    bottom: 0;
     z-index: 0;
     width: 100%;
     height: 100%;

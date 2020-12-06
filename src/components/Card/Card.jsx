@@ -1,7 +1,6 @@
 import s from "../../styled";
 import { ErrorBoundary } from "../ErrorBoundary";
 import React, { useEffect, useRef, useState } from "react";
-import image from "../../img/_lego.jpeg";
 
 /**
  * Card component with parallax animation
@@ -23,6 +22,7 @@ const Card = ({
   cardInnerWidth,
   cardMargin,
   selectedCardInnerWidth,
+  image,
 }) => {
   let mouseLeaveDelay;
   const isSelected = idx === selectedItem;

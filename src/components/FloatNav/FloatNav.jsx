@@ -4,6 +4,7 @@ import $ from "jquery";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import s from "../../styled";
+import { ErrorBoundary } from "../ErrorBoundary";
 import { Link } from "react-router-dom";
 
 const Main = styled.div`
@@ -23,17 +24,18 @@ const FloatNav = () => {
 
     $(document).ready(function () {
       // better body background color changing function
-      $(".menu-thing").click(function () {
+
+      $(".menu-thing").click(function (e) {
         $("body").removeClass("whoa");
         $("body").css("background-color", $(this).css("background-color"));
-
-        return false;
+        console.log(e);
+        // return false;
       });
 
       $(".whoa-button").click(function () {
         $("body").toggleClass("whoa");
 
-        return false;
+        // return false;
       });
     });
   });
@@ -45,26 +47,23 @@ const FloatNav = () => {
 
   return (
     <Main>
-      <input type="checkbox" id="menuCheckbox" />
-      <div className="menu-container">
-        <label className="menu-label" htmlFor="menuCheckbox">
-          <div className="white-line" />
-        </label>
-        <div className="menu-thing side one" onClick={handleClicked}>
-          <s.NavLink to="/">01</s.NavLink>
-          <Link to="/home" />
+      <ErrorBoundary>
+        <input type="checkbox" id="menuCheckbox" />
+        <div className="menu-container">
+          <label className="menu-label" htmlFor="menuCheckbox">
+            <div className="white-line" />
+          </label>
+          <div className="menu-thing side one">
+            <s.NavLink to="/">01</s.NavLink>
+          </div>
+          <div className="menu-thing side two">
+            <s.NavLink to="/default">02</s.NavLink>
+          </div>
+          <div className="menu-thing side three" />
+          <div className="menu-thing side four">04</div>
         </div>
-        <div className="menu-thing side two" onClick={handleClicked}>
-          <s.NavLink to="/carousel">02</s.NavLink>
-        </div>
-        <div className="menu-thing side three" onClick={handleClicked}>
-          <Link to="/home">n_n</Link>
-        </div>
-        <div className="menu-thing side four" onClick={handleClicked}>
-          : )
-        </div>
-      </div>
-      <div className="whoa-button">:O</div>
+        <div className="whoa-button">:O</div>
+      </ErrorBoundary>
     </Main>
   );
 };

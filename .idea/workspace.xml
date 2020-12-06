@@ -4,13 +4,16 @@
     <list default="true" id="bd75c746-7b82-4942-aad9-69d03f64c6b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FloatNav/floatnavb.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatNav/floatnavb.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/_horizaon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/_horizon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styled/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styled/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/initialItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/initialItems.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +53,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607163061244</updated>
       <workItem from="1607163063427" duration="4392000" />
-      <workItem from="1607229416868" duration="5263000" />
+      <workItem from="1607229416868" duration="13028000" />
+      <workItem from="1607244703265" duration="3463000" />
     </task>
     <servers />
   </component>
