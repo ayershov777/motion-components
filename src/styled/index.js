@@ -43,11 +43,12 @@ const Slider = styled(motion.div)`
 `;
 
 const Card = styled(motion.div)`
+  box-sizing: border-box;
   display: inline-block;
-  margin: ${({ cardMargin }) => cardMargin}px;
-  height: ${({ cardInnerHeight }) => cardInnerHeight};
-  width: ${({ cardInnerWidth }) => cardInnerWidth};
-  border: ${({ cardBorderWidth }) => cardBorderWidth}px solid black;
+  margin: 0 ${({ cardMargin }) => cardMargin}px;
+  height: ${({ cardInnerWidth }) => cardInnerWidth}px;
+  width: ${({ cardInnerWidth }) => cardInnerWidth}px;
+  border: 1px solid black;
 `;
 
 export default {
