@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import s from "../styled";
+import { Card } from "./Card";
 
 const Carousel = ({ vpSize, initialItems }) => {
   const [items, setItems] = useState(initialItems);
@@ -13,9 +14,42 @@ const Carousel = ({ vpSize, initialItems }) => {
   const selectedCardInnerWidth = vpSize.height * 0.4;
   const selectedCardWidth = selectedCardInnerWidth + 2 * cardMargin;
 
-  const offset = -(selectedItem * cardWidth) + vpSize.width / 2 - selectedCardWidth / 2;
+  const offset =
+    -(selectedItem * cardWidth) + vpSize.width / 2 - selectedCardWidth / 2;
 
-  const handleClickCard = (e) => setSelectedItem(parseInt(e.target.dataset.idx));
+  const handleClickCard = (e) =>
+    setSelectedItem(parseInt(e.target.dataset.idx));
+
+  const downHandler = (e) => {
+    switch (e.keyCode) {
+      case 37:
+        if (selectedItem > 0) {
+          setSelectedItem(selectedItem - 1);
+        } else {
+          setSelectedItem(0);
+        }
+
+        break;
+      case 39:
+        if (selectedItem < items.length || selectedItem !== items.length) {
+          setSelectedItem(selectedItem + 1);
+        } else {
+          setSelectedItem(selectedItem);
+        }
+
+        break;
+      default:
+        break;
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", downHandler);
+
+    return () => {
+      window.removeEventListener("keydown", downHandler);
+    };
+  }, [selectedItem]);
 
   const cards = items.map((item, idx) => {
     const isSelected = idx === selectedItem;
@@ -44,7 +78,17 @@ const Carousel = ({ vpSize, initialItems }) => {
         cardWidth={cardWidth}
         selectedCardWidth={selectedCardWidth}
       >
-        {cards}
+        {items.map((item, idx) => (
+          <Card
+            item={items}
+            cardInnerWidth={cardInnerWidth}
+            cardMargin={cardMargin}
+            handleClickCard={handleClickCard}
+            idx={idx}
+            selectedCardInnerWidth={selectedCardInnerWidth}
+            selectedItem={selectedItem}
+          />
+        ))}
       </s.Slider>
     </s.Container>
   );

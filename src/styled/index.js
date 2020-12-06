@@ -39,7 +39,7 @@ const Slider = styled(motion.div)`
   overflow-x: hidden;
   width: ${({ n, cardWidth, selectedCardWidth }) =>
     (n - 1) * cardWidth + selectedCardWidth}px;
-  height: 60vh;
+  height: 100vh;
 `;
 
 const Card = styled(motion.div)`
@@ -49,6 +49,9 @@ const Card = styled(motion.div)`
   height: ${({ cardInnerWidth }) => cardInnerWidth}px;
   width: ${({ cardInnerWidth }) => cardInnerWidth}px;
   border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+    inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
 `;
 
 export default {

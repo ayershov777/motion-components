@@ -4,9 +4,10 @@
     <list default="true" id="bd75c746-7b82-4942-aad9-69d03f64c6b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styled/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styled/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/initialItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/initialItems.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

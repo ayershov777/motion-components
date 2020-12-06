@@ -4,6 +4,7 @@ import $ from "jquery";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import s from "../../styled";
+import { Link } from "react-router-dom";
 
 const Main = styled.div`
   overflow: hidden;
@@ -47,12 +48,15 @@ const FloatNav = () => {
           <div className="white-line" />
         </label>
         <div className="menu-thing side one">
-          <s.NavLink to="/">:D</s.NavLink>
+          <s.NavLink to="/">01</s.NavLink>
+          <Link to="/home" />
         </div>
         <div className="menu-thing side two">
-          <s.NavLink to="/carousel">:D</s.NavLink>
+          <s.NavLink to="/carousel">02</s.NavLink>
         </div>
-        <div className="menu-thing side three">n_n</div>
+        <div className="menu-thing side three">
+          <Link to="/home">n_n</Link>
+        </div>
         <div className="menu-thing side four">:)</div>
       </div>
       <div className="whoa-button">:O</div>

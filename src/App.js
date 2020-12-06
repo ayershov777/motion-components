@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import CarouselDemoPage from "./components/CarouselDemoPage";
 import styled from "styled-components";
+import { FloatNav } from "./components/FloatNav";
 
 function App() {
   const [vpSize, setVpSize] = useState({
@@ -86,7 +87,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <FloatNav />
       <AnimatePresence exitBeforeEnter onExitComplete>
         <Switch>
           <Route exact path="/">
