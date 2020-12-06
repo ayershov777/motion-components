@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+* {
+    transition: 0.33s ease;
+}
+body {
+    background-color: #e4e9e9;
+    font-family: "Raleway";
+}
+.menu-container {
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 60px;
+    width: 60px;
+    transition: 0.33s ease, height 0.33s 0.33s ease;
+}
+.menu-thing {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    left: -120%;
+    box-shadow: 2px 5px 8px -1px rgba(0,0,0,0.4);
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+.menu-thing.one {
+    top: 60px;
+    background-color: #3eb890;
+}
+.menu-thing.two {
+    top: 120px;
+    background-color: #70cadb;
+}
+.menu-thing.three {
+    top: 180px;
+    background-color: #e8a723;
+}
+.menu-thing.four {
+    top: 240px;
+    background-color: #e01765;
+}
+.menu-thing:hover {
+    width: 75px;
+}
+.menu-label {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    left: 0;
+    background-color: #443642;
+    box-shadow: 2px 5px 8px -1px rgba(0,0,0,0.4);
+}
+.menu-label:before {
+    content: "Background";
+    position: absolute;
+    top: 50%;
+    left: 175%;
+    transform: translateY(-50%);
+    padding: 6px;
+    letter-spacing: 2px;
+    background-color: rgba(0,0,0,0.65);
+    color: #f2f2f2;
+    transition: 0.25s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu-label:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 130%;
+    transform: translateY(-50%);
+    border: 14px solid transparent;
+    border-right: 14px solid rgba(0,0,0,0.65);
+    transition: 0.25s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu-label:hover:before {
+    opacity: 1;
+    left: 125.5%;
+}
+.menu-label:hover:after {
+    opacity: 1;
+    left: 80%;
+}
+.white-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 70%;
+    background-color: #fff;
+}
+.white-line:before,
+.white-line:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    background-color: #fff;
+    transition: 0.2s ease;
+}
+.white-line:before {
+    top: -7px;
+}
+.white-line:after {
+    top: 8px;
+}
+#menuCheckbox {
+    display: none;
+}
+#menuCheckbox:checked~ .menu-container {
+    height: 300px;
+    transition: 0.33s ease;
+}
+#menuCheckbox:checked~ .menu-container .menu-thing {
+    left: 0;
+}
+#menuCheckbox:checked~ .menu-container .menu-thing.one {
+    transition: 0.33s ease, left 0.33s 0.33s ease;
+}
+#menuCheckbox:checked~ .menu-container .menu-thing.two {
+    transition: 0.33s ease, left 0.33s 0.43s ease;
+}
+#menuCheckbox:checked~ .menu-container .menu-thing.three {
+    transition: 0.33s ease, left 0.33s 0.53s ease;
+}
+#menuCheckbox:checked~ .menu-container .menu-thing.four {
+    transition: 0.33s ease, left 0.33s 0.63s ease;
+}
+.face {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    width: 85%;
+    text-align: center;
+    color: #e4e9e9;
+    transition: 0s ease;
+}
+.face.two {
+    top: 75%;
+    opacity: 0;
+}
+.face.two.visible {
+    opacity: 1;
+}
+.face span {
+    letter-spacing: 1vw;
+}
+.whoa-button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: transparent;
+    color: #e4e9e9;
+}
+.whoa-button:hover {
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+}
+.whoa {
+    animation: colors 1.5s infinite linear;
+}
+@-moz-keyframes colors {
+    0% {
+        background-color: #3eb890;
+    }
+    25% {
+        background-color: #e8a723;
+    }
+    50% {
+        background-color: #70cadb;
+    }
+    75% {
+        background-color: #e01765;
+    }
+    100% {
+        background-color: #3eb890;
+    }
+}
+@-webkit-keyframes colors {
+    0% {
+        background-color: #3eb890;
+    }
+    25% {
+        background-color: #e8a723;
+    }
+    50% {
+        background-color: #70cadb;
+    }
+    75% {
+        background-color: #e01765;
+    }
+    100% {
+        background-color: #3eb890;
+    }
+}
+@-o-keyframes colors {
+    0% {
+        background-color: #3eb890;
+    }
+    25% {
+        background-color: #e8a723;
+    }
+    50% {
+        background-color: #70cadb;
+    }
+    75% {
+        background-color: #e01765;
+    }
+    100% {
+        background-color: #3eb890;
+    }
+}
+@keyframes colors {
+    0% {
+        background-color: #3eb890;
+    }
+    25% {
+        background-color: #e8a723;
+    }
+    50% {
+        background-color: #70cadb;
+    }
+    75% {
+        background-color: #e01765;
+    }
+    100% {
+        background-color: #3eb890;
+    }
+}
