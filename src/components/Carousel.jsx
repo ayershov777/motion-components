@@ -1,10 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import s from "../styled";
 
 const Carousel = ({ vpSize, initialItems }) => {
   const [items, setItems] = useState(initialItems);
   const [selectedItem, setSelectedItem] = useState(0);
+
+  const prevVpHeightRef = useRef();
+
+  useEffect(() => {
+    prevVpHeightRef.current = vpSize.height;
+  });
+
+  const prevVpHeight = prevVpHeightRef.current;
+  const shouldAnimate = prevVpHeight ? (vpSize.height === prevVpHeight) : true;
 
   const cardMargin = 12;
 
@@ -27,7 +36,7 @@ const Carousel = ({ vpSize, initialItems }) => {
         isSelected={isSelected}
         onClick={handleClickCard}
         animate={{ width: size, height: size }}
-        transition={{ duration: 0.2, delay: 0.3 }}
+        transition={shouldAnimate ? { duration: 0.2, delay: 0.3 } : { duration: 0.2 }}
         cardMargin={cardMargin}
         cardInnerWidth={cardInnerWidth}
         data-idx={idx}
@@ -40,7 +49,7 @@ const Carousel = ({ vpSize, initialItems }) => {
       <s.Slider
         n={items.length}
         animate={{ x: offset }}
-        transition={{ duration: 0.4 }}
+        transition={shouldAnimate ? { duration: 0.4 } : { duration: 0.2 }}
         cardWidth={cardWidth}
         selectedCardWidth={selectedCardWidth}
       >

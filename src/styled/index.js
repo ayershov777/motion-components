@@ -21,6 +21,7 @@ const NavLink = styled(Link)`
 
 const Container = styled.div`
   overflow-x: hidden;
+  height: 90vh;
 `;
 
 const Buttons = styled.div`
@@ -34,12 +35,13 @@ const Button = styled.button`
 `;
 
 const Slider = styled(motion.div)`
+  position: absolute;
   display: flex;
   align-items: center;
-  overflow-x: hidden;
-  width: ${({ n, cardWidth, selectedCardWidth }) =>
-    (n - 1) * cardWidth + selectedCardWidth}px;
-  height: 60vh;
+  overflow: hidden;
+  width: 10000px;
+  height: 100%;
+  margin-top: -10vh;
 `;
 
 const Card = styled(motion.div)`
