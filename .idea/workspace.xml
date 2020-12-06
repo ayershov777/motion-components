@@ -4,11 +4,16 @@
     <list default="true" id="bd75c746-7b82-4942-aad9-69d03f64c6b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselDemoPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselDemoPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatNav/FloatNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/_horizaon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/_horizon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styled/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styled/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/cardWidth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/initialItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/initialItems.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lEX85eZl7XI5S1hEErFA9Xokc1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -34,7 +42,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\rando\Documents\Development\game\motion-components\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,6 +53,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607163061244</updated>
       <workItem from="1607163063427" duration="4392000" />
+      <workItem from="1607229416868" duration="13028000" />
+      <workItem from="1607244703265" duration="3463000" />
     </task>
     <servers />
   </component>
@@ -61,6 +71,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
