@@ -9,22 +9,29 @@ import { VoyagerSlider } from "./components";
 function App() {
   const [vpSize, setVpSize] = useState({
     width: window.innerWidth,
-    height: window.innerHeight,
+    height: window.innerHeight
   });
 
+  const [resizeTimeout, setResizeTimeout] = useState(0);
+
   useEffect(() => {
+    const handleResize = () => {
+      console.log('resize');
+      clearTimeout(resizeTimeout);
+      const timeout = setTimeout(() => {
+        setVpSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }, 200);
+      setResizeTimeout(timeout);
+    };
+    
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [resizeTimeout]);
 
-  const handleResize = () => {
-    requestAnimationFrame(() =>
-      setVpSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-    );
-  };
+
 
   return (
     <Router>
